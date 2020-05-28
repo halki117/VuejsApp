@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
       countUp: function() {
         this.number += 1 
       },
-      changeMousePosition: function(event) {
+      changeMousePosition: function(event, divideNumber) {
         console.log(event);
-        this.x = event.clientX;
-        this.y = event.clientY;
+        this.x = event.clientX / divideNumber;
+        this.y = event.clientY / divideNumber;
       }
     },
     components: { App }
