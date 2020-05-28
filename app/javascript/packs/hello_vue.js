@@ -39,7 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#hello',
     data: {
-      message: "Can you say hello?"
+      number: 0,
+      x: 0,
+      y: 0
+    },
+    methods: {
+      countUp: function() {
+        this.number += 1 
+      },
+      changeMousePosition: function(event) {
+        console.log(event);
+        this.x = event.clientX;
+        this.y = event.clientY;
+      }
     },
     components: { App }
   })

@@ -1,7 +1,10 @@
 <h1>Top#index</h1>
 <p>Find me in app/views/top/index.html.erb</p>
 
-<div id='hello'>
-{{message}}
+<div  id='hello'>
+<p>現在{{number}}回クリックされている</p>
+<button v-on:click="countUp()">カウントアップ</button>
+<p v-on:mousemove="changeMousePosition">マウスを載せてください</p>
+<p>X:{{x}}、Y:{{y}}</p>
 <app></app>
 </div>
