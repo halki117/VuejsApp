@@ -1,10 +1,10 @@
 <h1>Top#index</h1>
 <p>Find me in app/views/top/index.html.erb</p>
 
-<div  id='hello'>
-<p>現在{{number}}回クリックされている</p>
-<button v-on:click="countUp()">カウントアップ</button>
-<p v-on:mousemove="changeMousePosition($event, 10)">マウスを載せてください</p>
-<p>X:{{x}}、Y:{{y}}</p>
+<div id='hello'>
+<input type="text" v-model="message">
+<p>{{ counter }}</p>
+<button @click="counter += 1">+1</button>
+<p>{{ lessThanThree }}</p>
 <app></app>
 </div>

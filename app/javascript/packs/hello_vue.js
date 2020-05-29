@@ -39,18 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new Vue({
     el: '#hello',
     data: {
-      number: 0,
-      x: 0,
-      y: 0
+      counter: 0
     },
-    methods: {
-      countUp: function() {
-        this.number += 1 
-      },
-      changeMousePosition: function(event, divideNumber) {
-        console.log(event);
-        this.x = event.clientX / divideNumber;
-        this.y = event.clientY / divideNumber;
+    computed: {
+      lessThanThree: function() {
+        return this.counter > 3 ? '3より上':'3以下'
       }
     },
     components: { App }
